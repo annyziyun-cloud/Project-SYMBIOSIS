@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>遊戲設定</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="settings-card">
+    <h2>環境設定</h2>
+    
+    <div class="setting-item">
+      <label for="bgm">背景音樂 (BGM)</label>
+      <input type="range" id="bgm" min="0" max="100" value="80">
+    </div>
 
+    <div class="setting-item">
+      <label for="sfx">環境音效 (SFX)</label>
+      <input type="range" id="sfx" min="0" max="100" value="70">
+    </div>
+
+    <div class="setting-item">
+      <label for="quality">畫面效果</label>
+      <select id="quality">
+        <option value="high">精美 (完整光影)</option>
+        <option value="medium">流暢 (標準)</option>
+        <option value="low">效能優先 (關閉動效)</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button class="save-btn" onclick="saveSettings()">儲存設定</button>
+      <button class="back-btn" onclick="goBack()">返回</button>
+    </div>
+  </div>
+  <script src="settings.js"></script>
+</body>
+</html>
