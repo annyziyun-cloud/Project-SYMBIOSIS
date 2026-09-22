@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 背景容器 -->
+  <div class="background-container"></div>
 
+  <!-- 主選單區域（不含標題，僅有三個功能按鈕） -->
+  <main class="menu-container">
+    <div class="menu-buttons">
+      <button class="menu-btn" id="btn-start" onclick="navigateTo('start')">
+        <span class="btn-glow"></span>
+        <span class="btn-text">開始遊戲</span>
+      </button>
+
+      <button class="menu-btn" id="btn-settings" onclick="navigateTo('settings')">
+        <span class="btn-glow"></span>
+        <span class="btn-text">設定</span>
+      </button>
+
+      <button class="menu-btn" id="btn-exit" onclick="navigateTo('exit')">
+        <span class="btn-glow"></span>
+        <span class="btn-text">離開遊戲</span>
+      </button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
