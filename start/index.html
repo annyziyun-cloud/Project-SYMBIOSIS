@@ -1,1 +1,29 @@
-
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>冒險啟程 - 存檔選擇</title>
+  <link rel="stylesheet" href="start.css">
+</head>
+<body>
+  <div class="start-panel">
+    <h2>選擇冒險存檔</h2>
+    <div class="slot-list">
+      <div class="save-slot" onclick="startGame(1)">
+        <span class="slot-title">存檔 1</span>
+        <span class="slot-info" id="slot-1-info">新冒險</span>
+      </div>
+      <div class="save-slot" onclick="startGame(2)">
+        <span class="slot-title">存檔 2</span>
+        <span class="slot-info" id="slot-2-info">空白紀錄</span>
+      </div>
+      <div class="save-slot" onclick="startGame(3)">
+        <span class="slot-title">存檔 3</span>
+        <span class="slot-info" id="slot-3-info">空白紀錄</span>
+      </div>
+    </div>
+    <button class="back-btn" onclick="goBack()">返回主選單</button>
+  </div>
+  <script src="start.js"></script>
+</body>
+</html>
