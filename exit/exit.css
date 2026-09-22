@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #030604;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: #bfd4c2;
+  transition: opacity 1s ease;
+}
+.exit-dialog {
+  text-align: center;
+  padding: 40px;
+  background: rgba(14, 24, 17, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(80, 120, 90, 0.3);
+}
+.farewell-text {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+.sub-text {
+  font-size: 0.9rem;
+  color: #7b9680;
+  margin-bottom: 28px;
+}
+.btn-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+button {
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  font-size: 0.95rem;
+}
+.confirm-btn { background: #3c2424; color: #e6b2b2; }
+.confirm-btn:hover { background: #553232; }
+.cancel-btn { background: #26382b; color: #c0dfc6; }
+.cancel-btn:hover { background: #354e3c; }
