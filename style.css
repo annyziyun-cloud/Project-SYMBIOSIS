@@ -1,1 +1,112 @@
+/* 全局設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
 
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background-color: #0b140d;
+}
+
+/* 森林背景圖 */
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('首頁圖.jpg') no-repeat center center/cover;
+  filter: brightness(0.95);
+  transform: scale(1);
+  transition: transform 10s ease;
+  z-index: 1;
+}
+
+/* 背景輕微緩慢縮放呼吸感 */
+body:hover .background-container {
+  transform: scale(1.02);
+}
+
+/* 選單容器：置底微靠中間偏下，融入林間小徑視覺 */
+.menu-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 7vh;
+  background: radial-gradient(circle at center, transparent 40%, rgba(5, 15, 8, 0.4) 90%);
+}
+
+/* 按鈕列表容器 */
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* 奇幻林木風格按鈕 */
+.menu-btn {
+  position: relative;
+  width: 260px;
+  height: 52px;
+  background: rgba(18, 32, 22, 0.65);
+  border: 1px solid rgba(162, 206, 148, 0.4);
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5),
+              inset 0 0 10px rgba(135, 185, 130, 0.2);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  overflow: hidden;
+}
+
+.menu-btn:hover {
+  background: rgba(28, 54, 34, 0.85);
+  border-color: rgba(212, 255, 180, 0.8);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(25, 60, 20, 0.7),
+              0 0 15px rgba(180, 240, 150, 0.5);
+}
+
+.menu-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* 按鈕文字 */
+.btn-text {
+  font-size: 1.15rem;
+  letter-spacing: 6px;
+  color: #e8f5e9;
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(144, 238, 144, 0.6), 0 2px 4px #000;
+  padding-left: 6px; /* 抵消 letter-spacing 偏右 */
+}
+
+/* 懸浮微光動效 */
+.btn-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(220, 255, 180, 0.25) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.menu-btn:hover .btn-glow {
+  opacity: 1;
+}
